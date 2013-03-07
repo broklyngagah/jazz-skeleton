@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/broklyngagah/Jazz.git",
-                "reference": "1a73dc31faa242825c51e3e7dd571404639e6662"
+                "reference": "5056f0b9c9a2b95080c6cbff8ae65930b95643da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/broklyngagah/Jazz/zipball/1a73dc31faa242825c51e3e7dd571404639e6662",
-                "reference": "1a73dc31faa242825c51e3e7dd571404639e6662",
+                "url": "https://api.github.com/repos/broklyngagah/Jazz/zipball/5056f0b9c9a2b95080c6cbff8ae65930b95643da",
+                "reference": "5056f0b9c9a2b95080c6cbff8ae65930b95643da",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 }
             ],
             "description": "expansion Silex",
-            "time": "2013-03-07 04:52:48"
+            "time": "2013-03-07 07:39:30"
         },
         {
             "name": "doctrine/common",

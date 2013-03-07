@@ -37,7 +37,6 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
 ));
 
 // register doctrine service provider
-
 $app->register(new \Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
         'driver' => $config['general']['database']['database_driver'],
@@ -48,6 +47,8 @@ $app->register(new \Silex\Provider\DoctrineServiceProvider(), array(
     ),
 ));
 
+// register cache provider
+$app->register(new Jazz\Provider\CacheServiceProvider($app, JAZZ_PROJECT_ROOT_DIR . '/app/cache'));
 
 // register httpCache service provider
 $app->register(new \Silex\Provider\HttpCacheServiceProvider(), array(
