@@ -1,0 +1,13 @@
+composer.phar
+/vendor
+/app/cache/profiler/*
+!/app/cache/profiler/.gitkeep
+/app/logs/*
+!/app/logs/.gitkeep
+/app/cache/routing/*
+!/app/cache/routing/.gitkeep
+/.idea
+/app/config/config.yml
+/app/config/routing.yml
+/app/logs/*.log
+/nbproject

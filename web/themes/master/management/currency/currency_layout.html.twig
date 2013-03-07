@@ -1,0 +1,13 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div>
+        <a href="{{ path('admin_currency_index') }}"> index </a> |
+        <a href="{{ path('admin_currency_create') }}">create</a> |
+        <a href="{{ path('admin_currency_edit', { 'id':'usd' }) }}"> edit </a> |
+    </div>
+
+    <div>
+        {% block isinyaContent %} {% endblock %}
+    </div>
+{% endblock %}

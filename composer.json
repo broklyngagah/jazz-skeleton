@@ -1,0 +1,18 @@
+{
+    "require": {
+		"silex/silex": "1.0.*@dev",
+		"twig/twig": ">=1.8,<2.0-dev",
+        "swiftmailer/swiftmailer": ">=4.1.2,<4.2-dev",
+		"symfony/yaml": "2.2.*",
+        "monolog/monolog": ">=1.0.0",
+        "doctrine/dbal": "2.2.*",
+        "symfony/form": "~2.1",
+        "symfony/config": "2.2.*@dev",
+        "symfony/dependency-injection": "2.2.*",
+        "symfony/twig-bridge" : "~2.0",
+        "broklyngagah/jazz": "1.0.*@dev"
+    },
+    "autoload": {
+        "psr-0": {"": "src/"}
+    }
+}

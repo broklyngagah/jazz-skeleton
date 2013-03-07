@@ -1,0 +1,15 @@
+# admin currency
+admin_currency_index:
+    path: /administrator/currency/
+    defaults: { _controller: Application\Management\Controller\CurrencyController::indexAction }
+    methods: [GET]
+
+admin_currency_create:
+    path: /administrator/currency/create
+    defaults: { _controller: Application\Management\Controller\CurrencyController::createAction }
+    methods: [GET|POST]
+
+admin_currency_edit:
+    path: /administrator/currency/edit/{id}
+    defaults: { _controller: Application\Management\Controller\CurrencyController::editAction }
+    methods: [GET|POST]

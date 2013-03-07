@@ -1,0 +1,17 @@
+#homepage:
+#    path: /
+#    defaults: { _controller: Jazz\Demo\Controller\DemoController::indexAction }
+#    methods: [GET]
+
+#homepage:
+#    path: /
+#    defaults: { _controller: [vendor]\[bundle_name]\Controller\[controller_name]::[method_name] }
+#    methods: [GET]
+
+#management:
+#    prefix: /
+#    resource: path to another routing file {.yml}
+
+#management:
+#    prefix: /
+#    resource: routing_management.yml
