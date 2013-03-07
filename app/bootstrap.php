@@ -17,6 +17,7 @@ $app = new \Jazz\Application(JAZZ_PROJECT_ROOT_DIR, true);
 
 $cfg[] = JAZZ_WEB_DIR.'/themes/'.$config['general']['themes_name']['theme_admin'];
 $cfg[] = JAZZ_WEB_DIR.'/themes/'.$config['general']['themes_name']['theme_front'];
+$cfg[] = JAZZ_WEB_DIR.'/themes';
 
 $app->register(new \Silex\Provider\SessionServiceProvider(), array(
     'session.storage.options' => array(
@@ -83,3 +84,16 @@ $app['twig']->addExtension(new \Jazz\Twig\TwigExtension($app));
 $app['twig']->addTokenParser(new \Jazz\Twig\SetContentTokenParser());
 $loader = new Twig_Loader_String();
 $app['twig.loader']->addLoader($loader);
+
+$app->error(function (\Exception $e, $code) use ($app) {
+    $app['monolog']->addInfo($e->getMessage());
+    $app['monolog']->addInfo($e->getTraceAsString());
+    
+    return $app['twig']->render('/default/error.html.twig', array(
+                'status_code'    => $code,
+                'status_text'    => $e->getMessage() ,
+                'exception'      => $e->getTraceAsString(),
+            ));
+    
+    //return $app->json(array("statusCode"=>$code, "message" => $message));
+});
