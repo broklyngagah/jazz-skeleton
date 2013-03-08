@@ -89,10 +89,12 @@ $app->error(function (\Exception $e, $code) use ($app) {
     $app['monolog']->addInfo($e->getMessage());
     $app['monolog']->addInfo($e->getTraceAsString());
     
+    $trace = explode('#', $e->getTraceAsString());
+    
     return $app['twig']->render('/default/error.html.twig', array(
                 'status_code'    => $code,
                 'status_text'    => $e->getMessage() ,
-                'exception'      => $e->getTraceAsString(),
+                'exception'      => $trace,
             ));
     
     //return $app->json(array("statusCode"=>$code, "message" => $message));
