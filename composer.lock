@@ -1,5 +1,5 @@
 {
-    "hash": "185d024edce1983c4b11c7e3f1f60c87",
+    "hash": "994ae850b942640c50b6d915df681eaa",
     "packages": [
         {
             "name": "broklyngagah/jazz",
@@ -602,17 +602,17 @@
         },
         {
             "name": "symfony/form",
-            "version": "v2.2.0",
+            "version": "2.2.x-dev",
             "target-dir": "Symfony/Component/Form",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Form.git",
-                "reference": "v2.2.0-RC3"
+                "reference": "879873d1be83f75ecdd73dce4fc2c8c332f12e78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Form/zipball/v2.2.0-RC3",
-                "reference": "v2.2.0-RC3",
+                "url": "https://api.github.com/repos/symfony/Form/zipball/879873d1be83f75ecdd73dce4fc2c8c332f12e78",
+                "reference": "879873d1be83f75ecdd73dce4fc2c8c332f12e78",
                 "shasum": ""
             },
             "require": {
@@ -657,7 +657,7 @@
             ],
             "description": "Symfony Form Component",
             "homepage": "http://symfony.com",
-            "time": "2013-02-23 06:46:07"
+            "time": "2013-03-01 10:42:10"
         },
         {
             "name": "symfony/http-foundation",
@@ -1169,6 +1169,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "silex/silex": 20,
+        "symfony/form": 20,
         "symfony/config": 20,
         "broklyngagah/jazz": 20
     }

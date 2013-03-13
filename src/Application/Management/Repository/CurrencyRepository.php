@@ -38,12 +38,12 @@ class CurrencyRepository
         try {
             $app['db']->beginTransaction();
 
-            $app['db']->bindValue('id', $data['id'], \PDO::PARAM_STR);
-            $app['db']->bindValue('currency_name', $data['currency_name'], \PDO::PARAM_STR);
-            $app['db']->bindValue('is_active', $data['is_active'], \PDO::PARAM_STR);
+            $query->bindValue('id', $data['id'], \PDO::PARAM_STR);
+            $query->bindValue('currency_name', $data['currency_name'], \PDO::PARAM_STR);
+            $query->bindValue('is_active', $data['is_active'], \PDO::PARAM_STR);
 
-            $app['db']->execute();
-            $app['db']->commit();
+            $query->execute();
+            $query->commit();
         } catch (\PDOException $e) {
             $app['db']->rollback;
             return array(

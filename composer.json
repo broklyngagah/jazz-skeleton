@@ -6,7 +6,7 @@
 		"symfony/yaml": "2.2.*",
         "monolog/monolog": ">=1.0.0",
         "doctrine/dbal": "2.2.*",
-        "symfony/form": "~2.1",
+        "symfony/form": "2.2.*@dev",
         "symfony/config": "2.2.*@dev",
         "symfony/dependency-injection": "2.2.*",
         "symfony/twig-bridge" : "~2.0",
